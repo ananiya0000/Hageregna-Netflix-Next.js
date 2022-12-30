@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.item{
+  min-height: 40rem;
+  min-width: 30rem;
+  padding: 40px;
+  
+}
+.item img{
+  width: 100%;
+  height: 94%;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  pointer-events: none;
+  margin-bottom: 2rem;
+}
+.inner-carousel{
+  display: flex;
+  background: rgb(30, 30, 30);
+}
+.carousel{
+  cursor:grab;
+  overflow: hidden;
+  margin: 3% 5%;
+  background: rgb(31, 31, 31);
+  border-radius: 3rem;
+}
+.watch-btn{
+  font-size: x-large;
+  border-radius: 2rem;
+  color: #30476d;
+}

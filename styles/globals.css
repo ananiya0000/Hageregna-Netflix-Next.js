@@ -58,3 +58,13 @@ a {
   border-radius: 2rem;
   color: #30476d;
 }
+.footer{
+  background-color: transparent;
+  color: gray;
+  margin: 11.5% 45.5% 4% 40%;
+  align-items: center;
+  justify-content: center;
+}
+.footer img{
+  width: 10vw;
+}

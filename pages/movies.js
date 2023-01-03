@@ -57,10 +57,12 @@ export default function Movies(){
                 <m.div drag="x" dragConstraints={{right:0, left:-width}} className="inner-carousel">
                     {
                         discovermovie && discovermovie.results && discovermovie.results.map(element=>{
+                            element.vote_count="movie"
+                            console.log(element)
                             return (
                                 <m.div className="item" key={count++}>
                                     <img src={'https://image.tmdb.org/t/p/w500'+element.poster_path} alt="movie poster" />
-                                    <Link className=" bg-transparent mx-24 watch-btn hover:bg-slate-900 hover:text-gray-400 px-7 py-2" href={''}>
+                                    <Link className=" bg-transparent mx-24 watch-btn hover:bg-slate-900 hover:text-gray-400 px-7 py-2" href={{pathname:`/watch/${element.id}`,query:element}}>
                                     Watch
                                     </Link>
                                 </m.div>
@@ -74,10 +76,11 @@ export default function Movies(){
                 <m.div drag="x" dragConstraints={{right:0, left:-width}} className="inner-carousel">
                     {
                         topratedmovies && topratedmovies.results && topratedmovies.results.map(element=>{
+                            element.vote_count="movie"
                             return (
                                 <m.div className="item" key={count++}>
                                     <img src={'https://image.tmdb.org/t/p/w500'+element.poster_path} alt="movie poster" />
-                                    <Link className=" bg-transparent mx-24 watch-btn hover:bg-slate-900 hover:text-gray-400 px-7 py-2" href={''}>
+                                    <Link className=" bg-transparent mx-24 watch-btn hover:bg-slate-900 hover:text-gray-400 px-7 py-2" href={{pathname:`/watch/${element.id}`,query:element}}>
                                     Watch
                                     </Link>
                                 </m.div>
@@ -91,10 +94,11 @@ export default function Movies(){
                 <m.div drag="x" dragConstraints={{right:0, left:-width}} className="inner-carousel">
                     {
                         upcomingmovies && upcomingmovies.results && upcomingmovies.results.map(element=>{
+                            element.vote_count="movie"
                             return (
                                 <m.div className="item" key={count++}>
                                     <img src={'https://image.tmdb.org/t/p/w500'+element.poster_path} alt="movie poster" />
-                                    <Link className=" bg-transparent mx-24 watch-btn hover:bg-slate-900 hover:text-gray-400 px-7 py-2" href={''}>
+                                    <Link className=" bg-transparent mx-24 watch-btn hover:bg-slate-900 hover:text-gray-400 px-7 py-2" href={{pathname:`/watch/${element.id}`,query:element}}>
                                     Watch
                                     </Link>
                                 </m.div>
@@ -108,10 +112,11 @@ export default function Movies(){
                 <m.div drag="x" dragConstraints={{right:0, left:-width}} className="inner-carousel">
                     {
                         newmovies && newmovies.results && newmovies.results.map(element=>{
+                            element.vote_count="movie"
                             return (
                                 <m.div className="item" key={count++}>
                                     <img src={'https://image.tmdb.org/t/p/w500'+element.poster_path} alt="movie poster" />
-                                    <Link className=" bg-transparent mx-24 watch-btn hover:bg-slate-900 hover:text-gray-400 px-7 py-2" href={''}>
+                                    <Link className=" bg-transparent mx-24 watch-btn hover:bg-slate-900 hover:text-gray-400 px-7 py-2" href={{pathname:`/watch/${element.id}`,query:element}}>
                                     Watch
                                     </Link>
                                 </m.div>

@@ -31,6 +31,7 @@ export default function Search(){
             // setSearchresultstv(searchresultsTv.data)
             // setSearchresultspeople(searchresultsPeople.data)
             setSearchword(id)
+            console.log(allSearch.data)
         }
         getData()
     },[])
@@ -60,10 +61,11 @@ export default function Search(){
                 <m.div drag="x" dragConstraints={{right:0, left:-width}} className="inner-carousel">
                     {
                         allsearch && allsearch.results && allsearch.results.map(element=>{
+                            element.vote_count=element.media_type
                             return (
                                 <m.div className="item" key={count++}>
                                     <img src={'https://image.tmdb.org/t/p/w500'+element.poster_path} alt="movie poster" />
-                                    <Link className=" bg-transparent mx-24 watch-btn hover:bg-slate-900 hover:text-gray-400 px-7 py-2" href={''}>
+                                    <Link className=" bg-transparent mx-24 watch-btn hover:bg-slate-900 hover:text-gray-400 px-7 py-2" href={{pathname:`/watch/${element.id}`,query:element}}>
                                     Watch
                                     </Link>
                                 </m.div>

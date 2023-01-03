@@ -19,6 +19,7 @@ export default function Tvseries(){
     const carousel=useRef()
 
     const [searchword,setSearchword]=useState("all")
+   
 
     const handlechange=(event)=>{
         setSearchword(event.target.value)
@@ -61,10 +62,11 @@ export default function Tvseries(){
                 <m.div drag="x" dragConstraints={{right:0, left:-width}} className="inner-carousel">
                     {
                         discovertv && discovertv.results && discovertv.results.map(element=>{
+                            element.vote_count="tv"
                             return (
                                 <m.div className="item" key={count++}>
                                     <img src={'https://image.tmdb.org/t/p/w500'+element.poster_path} alt="movie poster" />
-                                    <Link className=" bg-transparent mx-24 watch-btn hover:bg-slate-900 hover:text-gray-400 px-7 py-2" href={''}>
+                                    <Link className=" bg-transparent mx-24 watch-btn hover:bg-slate-900 hover:text-gray-400 px-7 py-2" href={{pathname:`/watch/${element.id}`,query:element}}>
                                     Watch
                                     </Link>
                                 </m.div>
@@ -78,10 +80,11 @@ export default function Tvseries(){
                 <m.div drag="x" dragConstraints={{right:0, left:-width}} className="inner-carousel">
                     {
                         populartv && populartv.results && populartv.results.map(element=>{
+                            element.vote_count="tv"
                             return (
                                 <m.div className="item" key={count++}>
                                     <img src={'https://image.tmdb.org/t/p/w500'+element.poster_path} alt="movie poster" />
-                                    <Link className=" bg-transparent mx-24 watch-btn hover:bg-slate-900 hover:text-gray-400 px-7 py-2" href={''}>
+                                    <Link className=" bg-transparent mx-24 watch-btn hover:bg-slate-900 hover:text-gray-400 px-7 py-2"  href={{pathname:`/watch/${element.id}`,query:element}}>
                                     Watch
                                     </Link>
                                 </m.div>
@@ -95,10 +98,11 @@ export default function Tvseries(){
                 <m.div drag="x" dragConstraints={{right:0, left:-width}} className="inner-carousel">
                     {
                         tvonair && tvonair.results && tvonair.results.map(element=>{
+                            element.vote_count="tv"
                             return (
                                 <m.div className="item" key={count++}>
                                     <img src={'https://image.tmdb.org/t/p/w500'+element.poster_path} alt="movie poster" />
-                                    <Link className=" bg-transparent mx-24 watch-btn hover:bg-slate-900 hover:text-gray-400 px-7 py-2" href={''}>
+                                    <Link className=" bg-transparent mx-24 watch-btn hover:bg-slate-900 hover:text-gray-400 px-7 py-2" href={{pathname:`/watch/${element.id}`,query:element}}>
                                     Watch
                                     </Link>
                                 </m.div>
@@ -112,10 +116,11 @@ export default function Tvseries(){
                 <m.div drag="x" dragConstraints={{right:0, left:-width}} className="inner-carousel">
                     {
                         topratedtv && topratedtv.results && topratedtv.results.map(element=>{
+                            element.vote_count="tv"
                             return (
                                 <m.div className="item" key={count++}>
                                     <img src={'https://image.tmdb.org/t/p/w500'+element.poster_path} alt="movie poster" />
-                                    <Link className=" bg-transparent mx-24 watch-btn hover:bg-slate-900 hover:text-gray-400 px-7 py-2" href={''}>
+                                    <Link className=" bg-transparent mx-24 watch-btn hover:bg-slate-900 hover:text-gray-400 px-7 py-2" href={{pathname:`/watch/${element.id}`,query:element}}>
                                     Watch
                                     </Link>
                                 </m.div>
@@ -127,6 +132,7 @@ export default function Tvseries(){
             <div>
                 <Footer/>
             </div>
+
         </div>
     )
 }

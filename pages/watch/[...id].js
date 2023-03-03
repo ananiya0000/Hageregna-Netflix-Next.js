@@ -73,16 +73,16 @@ export default function Watch(){
     return (
         <div>
             <Header/>
-            <div className=' m-16'>
+            <div className=' m-4'>
                 <iframe src={url_tv_or_movie} width="100%vw" title={query.title} height="500px" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
             </div>
-            <div className=' flex mx-80 my-28'>
-                <div>
+            <div className=' lg:flex mx-8 lg:mx-80'>
+                <div className=' my-8'>
                     <img src={'https://image.tmdb.org/t/p/w500'+query.poster_path} className=" w-96 h-auto"  alt="" />
                 </div>
-                <div className=' px-10'>
-                    <h3 className=' text-[#4181FF] text-5xl '>Description</h3>
-                    <p className=' text-3xl'>{query.overview}</p>
+                <div className=' lg:px-10'>
+                    <h3 className=' text-[#4181FF] text-2xl '>Description</h3>
+                    <p className=' text-xl'>{query.overview}</p>
                 </div>
             </div>
             {seasonnumber && <div>
@@ -118,7 +118,7 @@ export default function Watch(){
                     </div>
                 </div>
             </div>}
-            <div className=' m-24'>
+            <div className=' '>
                 <div className=' px-20'>
                     <h1 className=' text-5xl text-[#4181FF]'></h1>
                 </div>
